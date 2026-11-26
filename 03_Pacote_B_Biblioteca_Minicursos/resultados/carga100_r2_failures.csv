@@ -1,0 +1,3 @@
+Method,Name,Error,Occurrences,First Seen,Last Seen
+GET,listar_cursos,CatchResponseError('HTTP 503'),3432,2026-11-26T05:41:49Z,2026-11-26T05:43:12Z
+GET,detalhe_curso,CatchResponseError('HTTP 503'),1460,2026-11-26T05:41:51Z,2026-11-26T05:43:12Z
