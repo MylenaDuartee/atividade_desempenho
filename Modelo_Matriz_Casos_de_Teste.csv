@@ -1,0 +1,2 @@
+id,regra,fluxo,tecnica,pre_condicao,dados,passos,resultado_esperado,assercao_principal,resultado_obtido,status,evidencia,arquivo_funcao
+CT01,R1 - Login,Login,Particao (valida),Sistema zerado,20260001 / senha123,1. Abrir /matricula/login 2. Preencher 3. Entrar,Oferta de disciplinas aberta,Tabela de disciplinas visivel,,aprovado / falhou,print ou relatorio,test_matricula.py::test_ct01_login_valido

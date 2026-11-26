@@ -1,4 +1,3 @@
-README.md
-trabalho2-funcionalidades/
 __pycache__/
+.pytest_cache/
 *.py[cod]
