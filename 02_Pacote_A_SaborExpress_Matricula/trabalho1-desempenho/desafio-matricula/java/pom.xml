@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Desafio A - Trabalho 1 (Gatling, Java DSL) - complete MatriculaSimulation.java
+
+  Pré-requisitos: JDK 17+ e Maven 3.9+
+  Suba o sistema-alvo antes:  python ../../../app/app.py
+
+  Executar:   mvn gatling:test -Dtipo=carga   (ou estresse, pico, resistencia)
+  Relatório:  target/gatling/<nome-da-simulacao>-<data>/index.html
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>br.edu.es3</groupId>
+  <artifactId>desafio-matricula</artifactId>
+  <version>1.0</version>
+
+  <properties>
+    <maven.compiler.release>17</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- Se houver versão mais nova no Maven Central, pode atualizar -->
+    <gatling.version>3.11.5</gatling.version>
+    <gatling-maven-plugin.version>4.9.6</gatling-maven-plugin.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.gatling.highcharts</groupId>
+      <artifactId>gatling-charts-highcharts</artifactId>
+      <version>${gatling.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>io.gatling</groupId>
+        <artifactId>gatling-maven-plugin</artifactId>
+        <version>${gatling-maven-plugin.version}</version>
+        <configuration>
+          <!-- Simulação executada por padrão (pode trocar com -Dgatling.simulationClass=...) -->
+          <simulationClass>br.edu.es3.MatriculaSimulation</simulationClass>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
